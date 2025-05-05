@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Class Activities - Stocks Page </title>
+    <link rel = "stylesheet" href= "styles.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href = "home.html"> Home </a></li>
+            <li><a href = "stocks.html"> Stocks </a></li>
+            <li><a href = "dogs.html"> Dogs </a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1> Stock Chart Viewer </h1>
+        <input type= "text" id = "ticker" placeholder= "Enter Stock Ticker">
+        <select id = "days">
+            <option value = "30"> 30 Days </option>
+            <option value = "60"> 60 Days </option>
+            <option value = "90"> 90 Days </option>
+        </select>
+        <button class = "custom-button" onclick= "getStockData()"> Show Chart </button>
+        <canvas id= "stockChart" width = "600" height = "400"></canvas>
+        
+
+        <h2> Top 5 Stocks on Reddit </h2>
+        <table id = "redditTable" >
+            <thead>
+                <tr>
+                    <th> Ticker</th>
+                    <th> Comments</th>
+                    <th> Sentiment</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+
+    <div class = "audio-instructions">
+        <p> Say: "hello" , "change the color to red", "navigate to dogs" </p>
+        <button onclick= "annyang.start()"> Turn On Audio </button>
+        <button onclick= "annyang.abort()"> Turn Off Audio </button>
+    </div>
+
+
+    <script src = "script.js"></script>
+    <script src = "stocks.js"></script>
+</body>
+</html>

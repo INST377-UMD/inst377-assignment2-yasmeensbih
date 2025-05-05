@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+    <meta charset = "UTF-8">
+    <title> Dogs </title>
+    <link rel= "stylesheet" href = "styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href = "home.html"> Home </a></li>
+            <li><a href = "stocks.html"> Stocks </a></li>
+            <li><a href = "dogs.html"> Dogs </a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1> Dog Gallery </h1>
+        <div class = "carousel-container" id = "dogCarousel"></div>
+        <h2> Dog Breeds </h2>
+        <div id= "breed-buttons" ></div>
+        <div class = "breed-info" id = "breedInfo"></div>
+    </main>
+    <div class = "audio-instructions">
+        <p> Say: "hello", "navigate to dogs", "load dog breed &lt;name&gt;" </p>
+        <button onclick= "annyang.start()"> Turn On Audio </button>
+        <button onclick= "annyang.abort()"> Turn Off Audio </button>
+    </div>
+
+
+    <script src = "script.js"></script>
+    <script src = "dogs.js"></script>
+</body>
+</html>
